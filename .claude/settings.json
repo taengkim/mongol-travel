@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.ktour25.com)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "powershell",
+            "command": "$j = $input | ConvertFrom-Json; $f = $j.tool_input.file_path; $env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User'); Set-Location 'd:\\project\\mongol'; git add .; $leaf = if ($f) { Split-Path $f -Leaf } else { 'files' }; git commit -m \"auto: update $leaf\"; git push",
+            "statusMessage": "GitHub에 자동 push 중..."
+          }
+        ]
+      }
+    ]
+  }
+}

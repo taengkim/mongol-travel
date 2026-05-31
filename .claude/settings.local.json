@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); cd \"d:\\\\project\\\\mongol\"; gh repo create mongol-travel --public --source=. --remote=origin --push --description \"몽골 여행 일정 비교 및 준비물 정리\")",
+      "WebFetch(domain:www.kayak.co.kr)",
+      "WebSearch",
+      "WebFetch(domain:kr.trip.com)",
+      "WebFetch(domain:www.wego.co.kr)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); cd \"d:\\\\project\\\\mongol\"; git add 몽골_여행_일정비교.md; git commit -m \"항공권 정보 추가 \\(ICN-ULN 8/12-8/17\\)\"; git push)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); cd \"d:\\\\project\\\\mongol\"; git log --oneline -5)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); cd \"d:\\\\project\\\\mongol\"; git status)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); cd \"d:\\\\project\\\\mongol\"; git add .; git commit -m \"auto-push 훅 추가 및 준비물 제목 수정\"; git push)"
+    ]
+  }
+}
