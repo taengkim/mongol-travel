@@ -10,7 +10,8 @@
       "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); cd \"d:\\\\project\\\\mongol\"; git log --oneline -5)",
       "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); cd \"d:\\\\project\\\\mongol\"; git status)",
       "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); cd \"d:\\\\project\\\\mongol\"; git add .; git commit -m \"auto-push 훅 추가 및 준비물 제목 수정\"; git push)",
-      "WebFetch(domain:blog.naver.com)"
+      "WebFetch(domain:blog.naver.com)",
+      "WebFetch(domain:goldenjigu.life)"
     ]
   }
 }
